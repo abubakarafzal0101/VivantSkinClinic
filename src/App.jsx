@@ -1,11 +1,7 @@
-import React from "react";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes";
+import "./index.css";
 
-const App = () => {
-  return (
-    <div className="text-4xl font-bold">
-      Vivant Skin CLinic will be Live Soon!
-    </div>
-  );
-};
-
-export default App;
+export default function App() {
+  return <RouterProvider router={router} />;
+}
