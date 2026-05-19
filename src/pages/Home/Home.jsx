@@ -8,7 +8,7 @@ import BeforeAfterSection from "../../components/sections/BeforeAfterSection";
 import TestimonialsSection from "../../components/sections/TestimonialsSection";
 import FAQSection from "../../components/sections/FAQSection";
 import CTASection from "../../components/sections/CTASection";
-
+import SEO from "../../components/ui/SEO";
 export default function Home() {
   const [loaded, setLoaded] = useState(false);
 
@@ -17,6 +17,11 @@ export default function Home() {
       {!loaded && <Preloader onComplete={() => setLoaded(true)} />}
       {loaded && (
         <Layout>
+          <SEO
+            title="Vivant Skin Clinic — Luxury Skin Aesthetics Lahore"
+            description="Lahore's premium skin aesthetics center. Hydrafacial, Laser Hair Removal, Botox & Fillers, Anti Aging. Book your free consultation today."
+            url="https://vivantskinclinic.com"
+          />
           <HeroSection />
           <ServicesSection />
           <DoctorSection />
