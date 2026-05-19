@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Award, Star, Users } from "lucide-react";
-
+import doctorImg3 from "../../assets/images/doctorimg3.webp";
 const credentials = [
   {
     icon: Award,
@@ -72,7 +72,7 @@ export default function DoctorSection() {
               }}
             >
               <img
-                src="src/assets/images/doctorimg3.webp"
+                src={doctorImg3}
                 alt="Dr. Rozina Tariq - Dermatologist, Vivant Skin Clinic Multan"
                 style={{
                   width: "100%",

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-
+import doctorImg from "../../../assets/images/doctorimg4.webp";
 export default function AboutStory() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -55,7 +55,7 @@ export default function AboutStory() {
             >
               {/* IMAGE REPLACED */}
               <img
-                src="src/assets/images/doctorimg4.webp"
+                src={doctorImg}
                 alt="Vivant Skin Clinic Multan"
                 style={{
                   width: "100%",
