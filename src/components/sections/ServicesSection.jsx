@@ -397,10 +397,10 @@ export default function ServicesSection() {
         }}
       >
         {[
-          { number: "5000+", label: "Happy Clients" },
-          { number: "12+", label: "Years Experience" },
-          { number: "98%", label: "Satisfaction Rate" },
-          { number: "20+", label: "Treatments" },
+          { number: "5★", label: "Client Reviews" },
+          { number: "Certified", label: "Dermatology Care" },
+          { number: "Advanced", label: "Laser Treatments" },
+          { number: "24/7", label: "Appointment Support" },
         ].map((stat) => (
           <div key={stat.label} style={{ textAlign: "center" }}>
             <div
@@ -426,6 +426,7 @@ export default function ServicesSection() {
                 {stat.number}
               </span>
             </div>
+
             <div
               style={{
                 fontFamily: "Manrope, sans-serif",

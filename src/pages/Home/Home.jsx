@@ -4,7 +4,7 @@ import Layout from "../../components/layout/Layout";
 import HeroSection from "../../components/sections/HeroSection";
 import ServicesSection from "../../components/sections/ServicesSection";
 import DoctorSection from "../../components/sections/DoctorSection";
-import BeforeAfterSection from "../../components/sections/BeforeAfterSection";
+// import BeforeAfterSection from "../../components/sections/BeforeAfterSection";
 import TestimonialsSection from "../../components/sections/TestimonialsSection";
 import FAQSection from "../../components/sections/FAQSection";
 import CTASection from "../../components/sections/CTASection";
@@ -25,7 +25,7 @@ export default function Home() {
           <HeroSection />
           <ServicesSection />
           <DoctorSection />
-          <BeforeAfterSection />
+          {/* <BeforeAfterSection /> */}
           <TestimonialsSection />
           <FAQSection />
           <CTASection />

@@ -36,7 +36,6 @@ export default function AboutStory() {
           transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
           style={{ position: "relative" }}
         >
-          {/* Main image placeholder */}
           <motion.div style={{ y: imgY }}>
             <div
               style={{
@@ -54,35 +53,16 @@ export default function AboutStory() {
                 overflow: "hidden",
               }}
             >
-              {/* Decorative inner */}
-              <div
+              {/* IMAGE REPLACED */}
+              <img
+                src="src/assets/images/doctorimg4.webp"
+                alt="Vivant Skin Clinic Multan"
                 style={{
-                  position: "absolute",
-                  inset: "20px",
-                  border: "1px solid rgba(201,164,108,0.08)",
-                  borderRadius: "2px",
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
                 }}
               />
-              <div
-                style={{
-                  fontFamily: "Cormorant Garamond, Georgia, serif",
-                  fontSize: "3rem",
-                  color: "rgba(201,164,108,0.2)",
-                }}
-              >
-                ✦
-              </div>
-              <div
-                style={{
-                  fontFamily: "Manrope, sans-serif",
-                  fontSize: "0.6rem",
-                  letterSpacing: "0.3em",
-                  color: "rgba(255,255,255,0.2)",
-                  textTransform: "uppercase",
-                }}
-              >
-                Clinic Image
-              </div>
             </div>
           </motion.div>
 
@@ -111,7 +91,7 @@ export default function AboutStory() {
                 lineHeight: 1,
               }}
             >
-              12+
+              5+
             </div>
             <div
               style={{
@@ -158,7 +138,7 @@ export default function AboutStory() {
                 color: "#C9A46C",
               }}
             >
-              Founded 2012
+              Vivant Skin Clinic • Multan
             </span>
           </div>
 
@@ -175,23 +155,13 @@ export default function AboutStory() {
           >
             A Legacy of
             <br />
-            <span
-              style={{
-                background:
-                  "linear-gradient(135deg, #A67C45, #C9A46C, #E2C49A)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              Skin Excellence
-            </span>
+            <span style={{}}>Advanced Dermatology Care</span>
           </h2>
 
           {[
-            "Vivant Skin Clinic was born from a singular vision — to bring world-class dermatology and aesthetic medicine to those who demand the very best for their skin.",
-            "Founded by Dr. Ayesha Malik, our clinic has grown into a sanctuary where cutting-edge science meets personalized care. Every treatment is meticulously crafted to honor the uniqueness of your skin.",
-            "We believe beauty is not about perfection — it is about revealing the most radiant, confident version of yourself.",
+            "Vivant Skin Clinic & Aesthetics, Multan is a leading dermatology center offering advanced laser treatments, acne management, pigmentation correction, PRP therapy, and skin rejuvenation services.",
+            "Our expert team provides personalized treatment plans based on each patient’s skin type and concerns, ensuring safe and effective results.",
+            "We are committed to enhancing natural beauty through modern dermatology, clinical expertise, and patient-focused care.",
           ].map((para, i) => (
             <motion.p
               key={i}
@@ -230,7 +200,7 @@ export default function AboutStory() {
                 marginBottom: "0.3rem",
               }}
             >
-              Dr. Ayesha Malik
+              Dr. Rozina Tariq
             </div>
             <div
               style={{
@@ -241,7 +211,7 @@ export default function AboutStory() {
                 color: "rgba(255,255,255,0.3)",
               }}
             >
-              Founder & Chief Dermatologist
+              Consultant Dermatologist • Vivant Skin Clinic Multan
             </div>
           </motion.div>
         </motion.div>

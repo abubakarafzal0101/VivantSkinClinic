@@ -3,9 +3,21 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Award, Star, Users } from "lucide-react";
 
 const credentials = [
-  { icon: Award, label: "Board Certified", sub: "Dermatologist" },
-  { icon: Star, label: "12+ Years", sub: "Experience" },
-  { icon: Users, label: "5000+", sub: "Patients Treated" },
+  {
+    icon: Award,
+    label: "Qualified Dermatologist",
+    sub: "MBBS · Dermatology Certified",
+  },
+  {
+    icon: Star,
+    label: "5.0 Rating",
+    sub: "Google Maps Reviews (Vivant Skin Clinic)",
+  },
+  {
+    icon: Users,
+    label: "500+ Patients",
+    sub: "Treated Successfully in Multan",
+  },
 ];
 
 export default function DoctorSection() {
@@ -50,7 +62,7 @@ export default function DoctorSection() {
               overflow: "hidden",
             }}
           >
-            {/* Placeholder image — replace with real doctor photo */}
+            {/* Image */}
             <div
               style={{
                 width: "100%",
@@ -60,8 +72,8 @@ export default function DoctorSection() {
               }}
             >
               <img
-                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80&fit=crop&crop=face"
-                alt="Dr. Sarah Ahmed - Dermatologist"
+                src="src/assets/images/doctorimg3.webp"
+                alt="Dr. Rozina Tariq - Dermatologist, Vivant Skin Clinic Multan"
                 style={{
                   width: "100%",
                   height: "100%",
@@ -72,7 +84,8 @@ export default function DoctorSection() {
                 }}
                 loading="lazy"
               />
-              {/* Subtle gold overlay at bottom */}
+
+              {/* overlay */}
               <div
                 style={{
                   position: "absolute",
@@ -81,13 +94,13 @@ export default function DoctorSection() {
                   right: 0,
                   height: "40%",
                   background:
-                    "linear-gradient(to top, rgba(17,17,17,0.3), transparent)",
+                    "linear-gradient(to top, rgba(17,17,17,0.35), transparent)",
                   pointerEvents: "none",
                 }}
               />
             </div>
 
-            {/* Gold border accent */}
+            {/* Gold border */}
             <div
               style={{
                 position: "absolute",
@@ -181,7 +194,7 @@ export default function DoctorSection() {
                 color: "#A67C45",
               }}
             >
-              Meet The Expert
+              Meet The Expert — Vivant Skin Clinic, Multan
             </span>
           </motion.div>
 
@@ -200,7 +213,7 @@ export default function DoctorSection() {
               marginBottom: "0.5rem",
             }}
           >
-            Dr. Sarah Ahmed
+            Dr. Rozina Tariq
           </motion.h2>
 
           <motion.div
@@ -217,7 +230,7 @@ export default function DoctorSection() {
               marginBottom: "2rem",
             }}
           >
-            MBBS · FCPS Dermatology · Fellowship London
+            MBBS · Dermatology Specialist · Vivant Skin Clinic
           </motion.div>
 
           <motion.div
@@ -246,11 +259,11 @@ export default function DoctorSection() {
               marginBottom: "2.5rem",
             }}
           >
-            With over 12 years of expertise in advanced dermatology and
-            aesthetic medicine, Dr. Ahmed brings a unique blend of clinical
-            precision and artistic vision to every treatment. Trained at leading
-            institutions in Pakistan and the UK, she is committed to delivering
-            results that enhance your natural beauty.
+            Vivant Skin Clinic & Aesthetics, Multan offers advanced dermatology
+            treatments including pigmentation correction, acne treatment, laser
+            hair removal, PRP therapy, hydra facial, and skin rejuvenation. Dr.
+            Rozina Tariq provides safe, professional and result-driven skin care
+            treatments with high patient satisfaction.
           </motion.p>
 
           {/* Credentials */}
@@ -323,6 +336,7 @@ export default function DoctorSection() {
               boxShadow: "0 0 30px rgba(201,164,108,0.25)",
             }}
             whileTap={{ scale: 0.97 }}
+            onClick={() => (window.location.href = "/contact")}
             style={{
               fontFamily: "Manrope, sans-serif",
               fontSize: "0.68rem",
@@ -337,7 +351,7 @@ export default function DoctorSection() {
               cursor: "pointer",
             }}
           >
-            Book With Dr. Ahmed
+            Book Now
           </motion.button>
         </div>
       </div>

@@ -2,7 +2,7 @@ import Layout from "../../components/layout/Layout";
 import AboutHero from "../../components/sections/about/AboutHero";
 import AboutStory from "../../components/sections/about/AboutStory";
 import AboutValues from "../../components/sections/about/AboutValues";
-import AboutTeam from "../../components/sections/about/AboutTeam";
+// import AboutTeam from "../../components/sections/about/AboutTeam";
 import AboutCTA from "../../components/sections/about/AboutCTA";
 import SEO from "../../components/ui/SEO";
 export default function About() {
@@ -16,7 +16,7 @@ export default function About() {
       <AboutHero />
       <AboutStory />
       <AboutValues />
-      <AboutTeam />
+      {/* <AboutTeam /> */}
       <AboutCTA />
     </Layout>
   );

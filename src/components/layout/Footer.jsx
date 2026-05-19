@@ -2,20 +2,29 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
-
 import { FiPhone, FiMail, FiMapPin, FiArrowUpRight } from "react-icons/fi";
 
 const links = {
   Treatments: [
-    "Hydrafacial",
-    "Laser Hair Removal",
-    "Botox & Fillers",
-    "Skin Rejuvenation",
-    "Acne Treatment",
-    "Skin Whitening",
+    { name: "Services", path: "/services" },
+    { name: "Hydrafacial", path: "/services" },
+    { name: "Laser Hair Removal", path: "/services" },
+    { name: "Acne Treatment", path: "/services" },
+    { name: "Pigmentation", path: "/services" },
+    { name: "Skin Glow", path: "/services" },
   ],
-  Company: ["About Us", "Our Doctor", "Gallery", "Blog", "Contact"],
-  Legal: ["Privacy Policy", "Terms & Conditions", "Cookie Policy"],
+  Company: [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "Services", path: "/services" },
+    { name: "Contact", path: "/contact" },
+  ],
+  Legal: [
+    { name: "Privacy Policy", path: "/contact" },
+    { name: "Terms & Conditions", path: "/contact" },
+    { name: "Cookie Policy", path: "/contact" },
+  ],
 };
 
 export default function Footer() {
@@ -52,7 +61,7 @@ export default function Footer() {
                   letterSpacing: "0.12em",
                 }}
               >
-                VIVANT
+                VIVANT SKIN CLINIC
               </div>
               <div
                 style={{
@@ -62,7 +71,7 @@ export default function Footer() {
                   letterSpacing: "0.35em",
                 }}
               >
-                SKIN CLINIC
+                MULTAN • DERMATOLOGY & AESTHETICS
               </div>
             </div>
 
@@ -73,36 +82,51 @@ export default function Footer() {
                 color: "rgba(255,255,255,0.3)",
                 lineHeight: 1.8,
                 marginBottom: "2rem",
-                maxWidth: "240px",
+                maxWidth: "260px",
               }}
             >
-              Premium dermatology and aesthetics center dedicated to revealing
-              your natural beauty.
+              Vivant Skin Clinic & Aesthetics provides advanced dermatology,
+              laser treatments, acne care, pigmentation solutions and skin
+              rejuvenation in Multan.
             </p>
 
-            {/* SOCIAL */}
+            {/* SOCIAL (REAL LINKS) */}
             <div style={{ display: "flex", gap: "0.8rem" }}>
-              {[
-                { Icon: FaInstagram, href: "#" },
-                { Icon: FaFacebookF, href: "#" },
-              ].map(({ Icon, href }) => (
-                <motion.a
-                  key={href}
-                  href={href}
-                  whileHover={{ scale: 1.1 }}
-                  style={{
-                    width: "38px",
-                    height: "38px",
-                    border: "1px solid rgba(201,164,108,0.2)",
-                    borderRadius: "50%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <Icon size={16} color="#C9A46C" />
-                </motion.a>
-              ))}
+              <motion.a
+                href="https://www.instagram.com/p/DX4gHLGFvq-/"
+                target="_blank"
+                rel="noreferrer"
+                whileHover={{ scale: 1.1 }}
+                style={{
+                  width: "38px",
+                  height: "38px",
+                  border: "1px solid rgba(201,164,108,0.2)",
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <FaInstagram size={16} color="#C9A46C" />
+              </motion.a>
+
+              <motion.a
+                href="https://www.facebook.com/vivantskincentre/"
+                target="_blank"
+                rel="noreferrer"
+                whileHover={{ scale: 1.1 }}
+                style={{
+                  width: "38px",
+                  height: "38px",
+                  border: "1px solid rgba(201,164,108,0.2)",
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <FaFacebookF size={16} color="#C9A46C" />
+              </motion.a>
             </div>
           </div>
 
@@ -124,9 +148,10 @@ export default function Footer() {
 
               <ul style={{ listStyle: "none", padding: 0 }}>
                 {items.map((item) => (
-                  <li key={item} style={{ marginBottom: "0.8rem" }}>
+                  <li key={item.name} style={{ marginBottom: "0.8rem" }}>
                     <Link
-                      to="#"
+                      to={item.path}
+                      onClick={scrollTop}
                       style={{
                         fontFamily: "Manrope",
                         fontSize: "0.78rem",
@@ -134,7 +159,7 @@ export default function Footer() {
                         textDecoration: "none",
                       }}
                     >
-                      {item}
+                      {item.name}
                     </Link>
                   </li>
                 ))}
@@ -154,28 +179,19 @@ export default function Footer() {
             padding: "2.5rem 0",
           }}
         >
-          <div
-            className="text-white"
-            style={{ display: "flex", gap: "0.6rem" }}
-          >
+          <div style={{ display: "flex", gap: "0.6rem", color: "#fff" }}>
             <FiPhone color="#C9A46C" />
-            +92 300 123 4567
+            +92 300 9454066
           </div>
 
-          <div
-            className="text-white"
-            style={{ display: "flex", gap: "0.6rem" }}
-          >
+          <div style={{ display: "flex", gap: "0.6rem", color: "#fff" }}>
             <FiMail color="#C9A46C" />
-            hello@vivant.com
+            vivantskinclinic@gmail.com
           </div>
 
-          <div
-            className="text-white"
-            style={{ display: "flex", gap: "0.6rem" }}
-          >
+          <div style={{ display: "flex", gap: "0.6rem", color: "#fff" }}>
             <FiMapPin color="#C9A46C" />
-            Karachi, Pakistan
+            Shop#4, Sir Syed Block, M A Jinnah Rd, Multan
           </div>
         </div>
 
@@ -209,7 +225,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* MOBILE */}
       <style>{`
         @media (max-width: 768px) {
           .footer-grid {

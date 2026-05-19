@@ -16,47 +16,48 @@ const treatments = [
   "Pigmentation Treatment",
   "Botox & Fillers",
   "Anti Aging",
-  "Skin Whitening",
+  "Skin Brightening",
+  "Melasma Treatment",
+  "Scar Treatment",
+  "Skin Tightening",
   "Other / General Inquiry",
 ];
-
 const contactInfo = [
   {
     Icon: Phone,
     label: "Call Us",
     value: "+92 300 945 4066",
-    sub: "Mon – Sat, 10am – 8pm",
+    sub: "Mon – Sun, Open 24 Hours",
     href: "tel:+923009454066",
   },
   {
     Icon: Mail,
     label: "Email",
-    value: "hello@vivantskinclinic.com",
+    value: "vivantskincarecentre@gmail.com",
     sub: "We reply within 24 hours",
-    href: "mailto:hello@vivantskinclinic.com",
+    href: "mailto:vivantskincarecentre@gmail.com",
   },
   {
     Icon: MapPin,
     label: "Location",
-    value: "DHA Phase 6, Karachi",
-    sub: "Pakistan",
-    href: "https://maps.google.com",
+    value: "Shop #4, Sir Syed Block, M.A Jinnah Rd, Multan",
+    sub: "MDA Officers Cooperative Housing Society, Pakistan",
+    href: "https://maps.google.com/?q=Shop+4+Sir+Syed+Block+M.A+Jinnah+Road+Multan",
   },
   {
     Icon: Clock,
     label: "Hours",
-    value: "Mon – Sat: 10am – 8pm",
-    sub: "Sunday: Closed",
+    value: "Open 24 Hours",
+    sub: "Emergency & appointments available",
     href: null,
   },
 ];
-
 // ─── WHATSAPP SUBMIT ──────────────────────────────────────────────────────────
 
 function sendToWhatsApp({ name, phone, email, treatment, message }) {
   const number = "923009454066"; // international format, no +
   const text = [
-    `🌿 *New Consultation Request — Vivant Skin Clinic*`,
+    `🌿 *Vivant Skin Clinic — Consultation Request*`,
     ``,
     `👤 *Name:* ${name}`,
     `📞 *Phone:* ${phone}`,
@@ -64,7 +65,7 @@ function sendToWhatsApp({ name, phone, email, treatment, message }) {
     `💆 *Treatment:* ${treatment || "Not specified"}`,
     `💬 *Message:* ${message || "No additional message"}`,
     ``,
-    `_Sent via Vivant Skin Clinic website_`,
+    `_Sent from Vivant Skin Clinic website_`,
   ].join("\n");
 
   const url = `https://wa.me/${number}?text=${encodeURIComponent(text)}`;
@@ -835,52 +836,68 @@ export default function ContactPageSection() {
       </section>
 
       {/* ── TRUST BAR ── */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
+        transition={{ duration: 0.9, delay: 0.3 }}
         style={{
-          padding: "4rem clamp(1.5rem, 8vw, 8rem)",
-          borderTop: "1px solid rgba(201,164,108,0.08)",
           display: "flex",
           justifyContent: "center",
-          gap: "clamp(2rem, 6vw, 6rem)",
+          gap: "clamp(2rem, 8vw, 6rem)",
+          padding: "5rem clamp(1.5rem, 6vw, 6rem) 0",
           flexWrap: "wrap",
+          borderTop: "1px solid rgba(201,164,108,0.08)",
+          marginTop: "0.5rem",
+          paddingBottom: "2rem",
         }}
       >
         {[
-          { number: "500+", label: "Happy Clients" },
-          { number: "5★", label: "Average Rating" },
-          { number: "8+", label: "Treatments" },
-          { number: "24h", label: "Response Time" },
-        ].map(({ number, label }) => (
-          <div key={label} style={{ textAlign: "center" }}>
+          { number: "5★", label: "Client Reviews" },
+          { number: "Certified", label: "Dermatology Care" },
+          { number: "Advanced", label: "Laser Treatments" },
+          { number: "24/7", label: "Appointment Support" },
+        ].map((stat) => (
+          <div key={stat.label} style={{ textAlign: "center" }}>
             <div
               style={{
                 fontFamily: "Cormorant Garamond, Georgia, serif",
-                fontSize: "clamp(2rem, 4vw, 3rem)",
+                fontSize: "clamp(2rem, 5vw, 3.5rem)",
                 fontWeight: 300,
-                color: "#C9A46C",
+                color: "#FFFFFF",
+                letterSpacing: "-0.02em",
                 lineHeight: 1,
                 marginBottom: "0.5rem",
               }}
             >
-              {number}
+              <span
+                style={{
+                  background:
+                    "linear-gradient(135deg, #A67C45, #C9A46C, #E2C49A)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                {stat.number}
+              </span>
             </div>
+
             <div
               style={{
                 fontFamily: "Manrope, sans-serif",
-                fontSize: "0.6rem",
-                letterSpacing: "0.2em",
+                fontSize: "0.62rem",
+                fontWeight: 400,
+                letterSpacing: "0.25em",
                 textTransform: "uppercase",
-                color: "rgba(255,255,255,0.25)",
+                color: "rgba(255,255,255,0.35)",
               }}
             >
-              {label}
+              {stat.label}
             </div>
           </div>
         ))}
-      </motion.section>
+      </motion.div>
 
       <style>{`
         @media (max-width: 900px) {
